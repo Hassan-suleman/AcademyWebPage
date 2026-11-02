@@ -1,0 +1,1111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Noor Academy | Quality Education, Confident Futures</title>
+    <meta
+      name="description"
+      content="Noor Academy offers Matric, O/A Level, MDCAT/ECAT prep, IELTS and computer courses with experienced teachers and small batches."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --surface: #f5f7fb;
+        --card: #ffffff;
+        --text: #1b2437;
+        --muted: #5b667d;
+        --primary: #1d4ed8;
+        --primary-ink: #ffffff;
+        --accent: #f59e0b;
+        --border: #e3e8f1;
+        --shadow: 0 8px 24px rgba(20, 35, 80, 0.08);
+        --hero1: #0f2a6b;
+        --hero2: #1d4ed8;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0e1424;
+          --surface: #131b30;
+          --card: #18213a;
+          --text: #e8ecf6;
+          --muted: #9aa6c0;
+          --primary: #5b8cff;
+          --primary-ink: #0b1226;
+          --accent: #fbbf24;
+          --border: #26324f;
+          --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+          --hero1: #0a1738;
+          --hero2: #1b3a9a;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0e1424;
+        --surface: #131b30;
+        --card: #18213a;
+        --text: #e8ecf6;
+        --muted: #9aa6c0;
+        --primary: #5b8cff;
+        --primary-ink: #0b1226;
+        --accent: #fbbf24;
+        --border: #26324f;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        --hero1: #0a1738;
+        --hero2: #1b3a9a;
+        color-scheme: dark;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px));
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          "Poppins",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        line-height: 1.65;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0 0 auto;
+        height: env(safe-area-inset-top, 0px);
+        background: var(--bg);
+        z-index: 60;
+      }
+      img {
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        line-height: 1.2;
+        margin: 0 0 0.5em;
+      }
+      section {
+        padding: 76px 0;
+      }
+      .alt {
+        background: var(--surface);
+      }
+      .eyebrow {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .sec-title {
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+      }
+      .sec-sub {
+        color: var(--muted);
+        max-width: 620px;
+        margin: 0 0 40px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        border: 2px solid transparent;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.97rem;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #1b1300;
+      }
+      .btn-ghost {
+        border-color: rgba(255, 255, 255, 0.7);
+        color: #fff;
+      }
+      .btn-solid {
+        background: var(--primary);
+        color: var(--primary-ink);
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* header */
+      header {
+        position: sticky;
+        top: env(safe-area-inset-top, 0px);
+        z-index: 50;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+      .logo i {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--primary);
+        color: var(--primary-ink);
+        font-style: normal;
+        font-size: 1.1rem;
+      }
+      nav ul {
+        display: flex;
+        gap: 26px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+      nav a {
+        font-weight: 500;
+        font-size: 0.93rem;
+        color: var(--muted);
+      }
+      nav a:hover {
+        color: var(--primary);
+      }
+      .nav-cta {
+        background: var(--primary);
+        color: var(--primary-ink) !important;
+        padding: 9px 20px;
+        border-radius: 999px;
+      }
+      .burger {
+        display: none;
+        background: none;
+        border: 0;
+        font-size: 1.7rem;
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      /* hero */
+      .hero {
+        background: linear-gradient(135deg, var(--hero1), var(--hero2));
+        color: #fff;
+        padding: 96px 0 84px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -120px;
+        top: -120px;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 40px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .hero h1 {
+        font-size: clamp(2.1rem, 5.2vw, 3.4rem);
+      }
+      .hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        max-width: 540px;
+      }
+      .hero .actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.14);
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 0.84rem;
+        margin-bottom: 18px;
+      }
+      .hero-card {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        padding: 28px;
+        backdrop-filter: blur(6px);
+      }
+      .hero-card h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.05rem;
+      }
+      .hero-card li {
+        margin: 8px 0;
+        list-style: none;
+      }
+      .hero-card li::before {
+        content: "✓ ";
+        color: var(--accent);
+        font-weight: 700;
+      }
+      .hero-card ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* stats */
+      .stats {
+        margin-top: -44px;
+        position: relative;
+        z-index: 2;
+        padding: 0;
+      }
+      .stats .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .stat {
+        padding: 26px 14px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+      .stat:last-child {
+        border: 0;
+      }
+      .stat b {
+        display: block;
+        font-size: 2rem;
+        color: var(--primary);
+        font-family: "Playfair Display", Georgia, serif;
+      }
+      .stat span {
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      /* cards */
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+      }
+      .ico {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-size: 1.5rem;
+        background: var(--surface);
+        margin-bottom: 16px;
+      }
+      .card h3 {
+        font-size: 1.2rem;
+      }
+      .card p {
+        color: var(--muted);
+        margin: 0 0 12px;
+        font-size: 0.94rem;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.78rem;
+        background: var(--surface);
+        color: var(--primary);
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+
+      /* about */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .about-box {
+        background: linear-gradient(135deg, var(--hero1), var(--hero2));
+        color: #fff;
+        border-radius: 22px;
+        padding: 40px;
+        min-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .about-box q {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.4rem;
+        line-height: 1.45;
+      }
+      .about-box small {
+        margin-top: 14px;
+        opacity: 0.8;
+      }
+      .checks {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+      }
+      .checks li {
+        padding-left: 30px;
+        position: relative;
+        margin: 10px 0;
+      }
+      .checks li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--primary-ink);
+        font-size: 0.72rem;
+        display: grid;
+        place-items: center;
+      }
+
+      /* timetable */
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--card);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 560px;
+      }
+      th,
+      td {
+        padding: 14px 18px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.93rem;
+      }
+      th {
+        background: var(--surface);
+        font-weight: 600;
+      }
+      tr:last-child td {
+        border: 0;
+      }
+
+      /* testimonials */
+      .stars {
+        color: var(--accent);
+        letter-spacing: 2px;
+      }
+      .who {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 14px;
+      }
+      .av {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--primary-ink);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+      .who small {
+        color: var(--muted);
+        display: block;
+        line-height: 1.3;
+      }
+
+      /* faq */
+      details {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 12px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      details p {
+        color: var(--muted);
+        margin: 10px 0 0;
+      }
+
+      /* contact */
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+      .info p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+      .info b {
+        color: var(--text);
+        display: block;
+      }
+      form {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+      label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin: 0 0 6px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--bg);
+        color: var(--text);
+        font: inherit;
+        margin-bottom: 16px;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 2px solid var(--primary);
+        border-color: transparent;
+      }
+      .note {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 12px 0 0;
+        text-align: center;
+      }
+
+      /* footer + floating whatsapp */
+      footer {
+        background: #0b1226;
+        color: #b7c0d8;
+        padding: 44px 0 28px;
+        font-size: 0.92rem;
+      }
+      footer .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+      .copy {
+        border-top: 1px solid #1d2745;
+        margin-top: 26px;
+        padding-top: 18px;
+        text-align: center;
+        font-size: 0.84rem;
+      }
+      .wa {
+        position: fixed;
+        right: 18px;
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 1.6rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        z-index: 40;
+      }
+
+      @media (max-width: 900px) {
+        .hero .wrap,
+        .about,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+        .grid3 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stats .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stat:nth-child(2) {
+          border-right: 0;
+        }
+        .stat:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--border);
+        }
+      }
+      @media (max-width: 680px) {
+        section {
+          padding: 56px 0;
+        }
+        .grid3 {
+          grid-template-columns: 1fr;
+        }
+        .burger {
+          display: block;
+        }
+        nav ul {
+          display: none;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 68px;
+          background: var(--bg);
+          flex-direction: column;
+          padding: 18px 20px 24px;
+          border-bottom: 1px solid var(--border);
+          gap: 16px;
+          align-items: flex-start;
+        }
+        nav ul.open {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a href="#home" class="logo"><i>N</i> Noor Academy</a>
+        <nav>
+          <button class="burger" id="burger" aria-label="Menu">☰</button>
+          <ul id="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#timetable">Timings</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-cta">Enroll Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap">
+          <div>
+            <span class="badge">🎓 Admissions Open 2026–27</span>
+            <h1>Learn with confidence. Succeed with Noor Academy.</h1>
+            <p>
+              Expert teachers, small batches and personal attention for Matric,
+              O/A Level, entry-test preparation, IELTS and computer skills.
+            </p>
+            <div class="actions">
+              <a href="#contact" class="btn btn-primary">Apply for Admission</a>
+              <a href="#courses" class="btn btn-ghost">Explore Courses</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h3>Why families choose us</h3>
+            <ul>
+              <li>Maximum 20 students per batch</li>
+              <li>Weekly tests and monthly parent reports</li>
+              <li>Free demo class for new students</li>
+              <li>Separate boys’ and girls’ batches</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="wrap">
+          <div class="grid">
+            <div class="stat">
+              <b data-n="12">0</b><span>Years of teaching</span>
+            </div>
+            <div class="stat">
+              <b data-n="2500">0</b><span>Students taught</span>
+            </div>
+            <div class="stat">
+              <b data-n="25">0</b><span>Expert teachers</span>
+            </div>
+            <div class="stat">
+              <b data-n="96">0</b><span>% pass results</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="wrap about">
+          <div class="about-box">
+            <q>Education is not filling a bucket, but lighting a fire.</q>
+            <small>Our teaching philosophy</small>
+          </div>
+          <div>
+            <div class="eyebrow">About us</div>
+            <h2 class="sec-title">A place where every student is seen</h2>
+            <p style="color: var(--muted)">
+              Noor Academy was founded to give students concept-based learning
+              instead of rote memorization. Our teachers track every student’s
+              progress and work with parents to build strong study habits.
+            </p>
+            <ul class="checks">
+              <li>Highly qualified, experienced faculty</li>
+              <li>Concept-based teaching with regular practice tests</li>
+              <li>Safe, air-conditioned classrooms with CCTV</li>
+              <li>Doubt-solving sessions at no extra charge</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" id="courses">
+        <div class="wrap">
+          <div class="eyebrow">Our programs</div>
+          <h2 class="sec-title">Courses built for results</h2>
+          <p class="sec-sub">
+            Choose the program that fits your goals. Every course includes
+            notes, tests and progress reports.
+          </p>
+          <div class="grid3">
+            <div class="card">
+              <div class="ico">📘</div>
+              <h3>Matric (9th–10th)</h3>
+              <p>
+                Science and Arts groups with complete board-pattern preparation.
+              </p>
+              <span class="tag">Mon–Sat</span>
+            </div>
+            <div class="card">
+              <div class="ico">🧪</div>
+              <h3>FSc / ICS (11th–12th)</h3>
+              <p>Physics, Chemistry, Biology, Maths and Computer Science.</p>
+              <span class="tag">Mon–Sat</span>
+            </div>
+            <div class="card">
+              <div class="ico">🌍</div>
+              <h3>O / A Level</h3>
+              <p>
+                Cambridge and Edexcel with past-paper practice and mock exams.
+              </p>
+              <span class="tag">Mon–Fri</span>
+            </div>
+            <div class="card">
+              <div class="ico">🩺</div>
+              <h3>MDCAT / ECAT</h3>
+              <p>
+                Entry-test crash and full-year programs with weekly mock tests.
+              </p>
+              <span class="tag">Full year</span>
+            </div>
+            <div class="card">
+              <div class="ico">🗣️</div>
+              <h3>IELTS &amp; English</h3>
+              <p>
+                Speaking, writing, reading and listening with mock band scoring.
+              </p>
+              <span class="tag">8 weeks</span>
+            </div>
+            <div class="card">
+              <div class="ico">💻</div>
+              <h3>Computer Courses</h3>
+              <p>
+                MS Office, graphic design, web basics and programming for
+                beginners.
+              </p>
+              <span class="tag">3 months</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="timetable">
+        <div class="wrap">
+          <div class="eyebrow">Class schedule</div>
+          <h2 class="sec-title">Batch timings</h2>
+          <p class="sec-sub">
+            Flexible morning and evening batches. Contact us if you need a
+            different slot.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Program</th>
+                  <th>Morning</th>
+                  <th>Evening</th>
+                  <th>Days</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Matric</td>
+                  <td>8:00 – 11:00 AM</td>
+                  <td>4:00 – 7:00 PM</td>
+                  <td>Mon – Sat</td>
+                </tr>
+                <tr>
+                  <td>FSc / ICS</td>
+                  <td>8:00 – 12:00 PM</td>
+                  <td>3:00 – 7:00 PM</td>
+                  <td>Mon – Sat</td>
+                </tr>
+                <tr>
+                  <td>O / A Level</td>
+                  <td>—</td>
+                  <td>4:00 – 8:00 PM</td>
+                  <td>Mon – Fri</td>
+                </tr>
+                <tr>
+                  <td>MDCAT / ECAT</td>
+                  <td>9:00 – 1:00 PM</td>
+                  <td>—</td>
+                  <td>Mon – Sat</td>
+                </tr>
+                <tr>
+                  <td>IELTS</td>
+                  <td>10:00 – 12:00 PM</td>
+                  <td>5:00 – 7:00 PM</td>
+                  <td>Mon – Thu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" id="reviews">
+        <div class="wrap">
+          <div class="eyebrow">Testimonials</div>
+          <h2 class="sec-title">What parents and students say</h2>
+          <p class="sec-sub">
+            Real feedback from the families we have worked with.
+          </p>
+          <div class="grid3">
+            <div class="card">
+              <div class="stars">★★★★★</div>
+              <p>
+                My son’s maths improved from 55% to 88% in one year. The
+                teachers truly care.
+              </p>
+              <div class="who">
+                <div class="av">A</div>
+                <div>Mrs. Ayesha Khan<small>Parent, Class 10</small></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="stars">★★★★★</div>
+              <p>
+                The MDCAT mock tests and doubt sessions gave me the confidence I
+                needed to get selected.
+              </p>
+              <div class="who">
+                <div class="av">H</div>
+                <div>Hira Malik<small>MBBS student</small></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Scored 7.5 in IELTS after eight weeks. The speaking practice
+                made all the difference.
+              </p>
+              <div class="who">
+                <div class="av">U</div>
+                <div>Usman Ali<small>IELTS student</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap" style="max-width: 780px">
+          <div class="eyebrow">FAQ</div>
+          <h2 class="sec-title">Common questions</h2>
+          <details>
+            <summary>Do you offer a free demo class?</summary>
+            <p>
+              Yes. Every new student can attend one demo class in any subject
+              before enrolling.
+            </p>
+          </details>
+          <details>
+            <summary>What are the fees?</summary>
+            <p>
+              Fees depend on the program and number of subjects. Send us a
+              message and we will share the fee structure on WhatsApp. Sibling
+              and early-payment discounts are available.
+            </p>
+          </details>
+          <details>
+            <summary>Are there separate batches for girls?</summary>
+            <p>
+              Yes, we run separate boys’ and girls’ batches with a safe,
+              supervised environment.
+            </p>
+          </details>
+          <details>
+            <summary>How do parents track progress?</summary>
+            <p>
+              Parents receive a monthly report with attendance, test scores and
+              teacher remarks, and can meet teachers on set days.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="alt" id="contact">
+        <div class="wrap contact">
+          <div class="info">
+            <div class="eyebrow">Get in touch</div>
+            <h2 class="sec-title">Enroll your child today</h2>
+            <p>
+              Fill in the form and we will contact you on WhatsApp to confirm
+              your demo class.
+            </p>
+            <p><b>📍 Address</b>Main Boulevard, Model Town, Gujranwala</p>
+            <p>
+              <b>📞 Phone / WhatsApp</b
+              ><a href="tel:+923364162992" id="phoneLink">+92 300 1234567</a>
+            </p>
+            <p><b>✉️ Email</b>info@nooracademy.pk</p>
+            <p><b>🕒 Office hours</b>Mon – Sat, 8:00 AM – 8:00 PM</p>
+            <a
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Model+Town+Gujranwala"
+              >📍 Open in Google Maps</a
+            >
+          </div>
+          <form id="form" novalidate>
+            <label for="name">Student name</label>
+            <input id="name" required placeholder="e.g. Ali Ahmed" />
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel" required placeholder="03XX XXXXXXX" />
+            <label for="course">Program</label>
+            <select id="course">
+              <option>Matric (9th–10th)</option>
+              <option>FSc / ICS (11th–12th)</option>
+              <option>O / A Level</option>
+              <option>MDCAT / ECAT</option>
+              <option>IELTS &amp; English</option>
+              <option>Computer Courses</option>
+            </select>
+            <label for="msg">Message (optional)</label>
+            <textarea
+              id="msg"
+              rows="3"
+              placeholder="Preferred timing, subjects, questions…"
+            ></textarea>
+            <button type="submit" class="btn btn-solid">
+              Send on WhatsApp
+            </button>
+            <p class="note" id="status">
+              Your message opens in WhatsApp so we can reply quickly.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="row">
+          <div>
+            <div class="logo" style="color: #fff"><i>N</i> Noor Academy</div>
+            <p style="margin: 10px 0 0">
+              Quality education, confident futures.
+            </p>
+          </div>
+          <div>
+            <a href="#about">About</a> &nbsp;·&nbsp;
+            <a href="#courses">Courses</a> &nbsp;·&nbsp;
+            <a href="#timetable">Timings</a> &nbsp;·&nbsp;
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="copy">
+          © <span id="yr">2026</span> Noor Academy. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="wa"
+      id="waFloat"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      href="#"
+      >💬</a
+    >
+
+    <script>
+      // ===== EDIT THESE FOR EACH CLIENT =====
+      var CONFIG = { whatsapp: "923364162992", academy: "Noor Academy" };
+      // ======================================
+      (function () {
+        var wa = "https://wa.me/" + CONFIG.whatsapp;
+        document.getElementById("waFloat").href =
+          wa +
+          "?text=" +
+          encodeURIComponent(
+            "Assalam o Alaikum, I want to know about admissions at " +
+              CONFIG.academy +
+              ".",
+          );
+        document.getElementById("yr").textContent = new Date().getFullYear();
+
+        var menu = document.getElementById("menu");
+        document
+          .getElementById("burger")
+          .addEventListener("click", function () {
+            menu.classList.toggle("open");
+          });
+        menu.addEventListener("click", function (e) {
+          if (e.target.tagName === "A") menu.classList.remove("open");
+        });
+
+        document
+          .getElementById("form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            var n = document.getElementById("name").value.trim();
+            var p = document.getElementById("phone").value.trim();
+            var s = document.getElementById("status");
+            if (!n || p.replace(/\D/g, "").length < 10) {
+              s.textContent =
+                "Please enter the student name and a valid phone number.";
+              s.style.color = "#dc2626";
+              return;
+            }
+            var text =
+              "Assalam o Alaikum, I would like to enroll.\n" +
+              "Student: " +
+              n +
+              "\nPhone: " +
+              p +
+              "\nProgram: " +
+              document.getElementById("course").value +
+              (document.getElementById("msg").value.trim()
+                ? "\nMessage: " + document.getElementById("msg").value.trim()
+                : "");
+            s.style.color = "";
+            s.textContent = "Opening WhatsApp…";
+            window.open(wa + "?text=" + encodeURIComponent(text), "_blank");
+          });
+
+        var counted = false;
+        function count() {
+          if (counted) return;
+          counted = true;
+          document.querySelectorAll("[data-n]").forEach(function (el) {
+            var t = +el.dataset.n,
+              c = 0,
+              step = Math.max(1, Math.ceil(t / 60));
+            var id = setInterval(function () {
+              c += step;
+              if (c >= t) {
+                c = t;
+                clearInterval(id);
+              }
+              el.textContent = c.toLocaleString() + (t >= 1000 ? "+" : "");
+            }, 25);
+          });
+        }
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(function (en, ob) {
+            if (en[0].isIntersecting) {
+              count();
+              ob.disconnect();
+            }
+          }).observe(document.querySelector(".stats"));
+        } else {
+          count();
+        }
+      })();
+    </script>
+  </body>
+</html>
